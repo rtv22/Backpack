@@ -3,6 +3,14 @@
 
 SCENARIO("init", "[init]") {
 	Backpack test;
-	REQUIRE(test.maxW() == 0);
-	REQUIRE(test.n() == 0);
+	REQUIRE(test.Weight() == 0);
+	REQUIRE(test.Value() == 0);
+}
+
+SCENARIO("copy", "[copy]")
+{
+	Backpack test (100, 2);
+	Backpack copy(test);
+	REQUIRE(test.Weight() == 100);
+	REQUIRE(test.Value() == 2);
 }
