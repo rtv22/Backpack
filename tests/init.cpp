@@ -2,7 +2,7 @@
 #include <catch.hpp>
 
 SCENARIO("init", "[init]") {
-	Backpack t;
-	REQUIRE(matrix.maxW() == 0);
-	REQUIRE(matrix.n() == 0);
+	Backpack test;
+	REQUIRE(test.maxW() == 0);
+	REQUIRE(test.n() == 0);
 }
