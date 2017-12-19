@@ -21,7 +21,22 @@ SCENARIO("main", "[main]")
 	Backpack copy(test);				//|   №   |   weight   |    cost   |
 	int val[] = { 10, 20, 30 };			//|   1   |    100     |     10    |
 	int wt[] = { 100, 120, 130 };			//|   2   |    120     |     20    |		maxVal = 50
-	REQUIRE(test.knapSack(wt, val, copy) == 50);	//|   3   |    130     |     30    |				
-							//---------------------------------|	
+	REQUIRE(test.knapSack(wt, val, copy) == 50);	//|   3   |    130     |     30    |											//---------------------------------|	
+							//----------------------------------					
 }
+
+SCENARIO("main1", "[main1]")
+{
+	Backpack test(300, 3);					//___________MaxW = 300____________
+	Backpack copy(test);					//|   №   |   weight   |    cost   |
+	int val[] = { 100, 20, 30 };				//|   1   |    100     |     100   |
+	int wt[] = { 100, 120, 130 };				//|   2   |    120     |     20    |		maxVal = 130 
+	REQUIRE(test.knapSack(wt, val, copy) == 130)		//|   3   |    130     |     30    |
+								//---------------------------------|
+}
+
+
+
+
+
 
