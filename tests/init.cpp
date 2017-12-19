@@ -2,9 +2,9 @@
 #include <catch.hpp>
 
 SCENARIO("init", "[init]") {
-	Backpack test1;
-	REQUIRE(test1.Weight() == 0);
-	REQUIRE(test1.Value() == 0);
+	Backpack test;
+	REQUIRE(test.Weight() == 0);
+	REQUIRE(test.Value() == 0);
 }
 
 SCENARIO("copy", "[copy]")
