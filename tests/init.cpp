@@ -9,10 +9,10 @@ SCENARIO("init", "[init]") {
 
 SCENARIO("copy", "[copy]")
 {
-	Backpack test (100, 2);
+	Backpack test (100, 3);
 	Backpack copy(test);
 	REQUIRE(test.Weight() == 100);
-	REQUIRE(test.Value() == 2);
+	REQUIRE(test.Value() == 3);
 }
 
 SCENARIO("main", "[main]")
