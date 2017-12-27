@@ -44,6 +44,13 @@ SCENARIO("main_3", "[main_3]")
 	REQUIRE(test.knapSack(wt, val, copy) == 585);
 }
 
-
+SCENARIO("main_4", "[main_4]")
+{
+	Backpack test(200, 22);
+	Backpack copy(test);
+	int val[] = { 10, 20, 30, 40, 50, 60, 75, 80, 90, 100, 100, 110, 90, 80, 10, 30, 40, 80, 15, 75, 160, 550 };
+	int wt[] = { 100, 10, 20, 15, 15, 60, 70, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 80, 110 };
+	REQUIRE(test.knapSack(wt, val, copy) == 950);
+}
 
 
