@@ -15,7 +15,7 @@ SCENARIO("copy", "[copy]")
 	REQUIRE(test.Value() == 3);
 }
 
-SCENARIO("main", "[main]")
+SCENARIO("main_1", "[main_1]")
 {
 	Backpack test(300, 3);				//___________MaxW = 300____________
 	Backpack copy(test);				//|   №   |   weight   |    cost   |
@@ -25,7 +25,7 @@ SCENARIO("main", "[main]")
 							//----------------------------------					
 }
 
-SCENARIO("main1", "[main1]")
+SCENARIO("main_2", "[main_2]")
 {
 	Backpack test(300, 3);					//___________MaxW = 300____________
 	Backpack copy(test);					//|   №   |   weight   |    cost   |
@@ -35,7 +35,14 @@ SCENARIO("main1", "[main1]")
 								//---------------------------------|
 }
 
-
+SCENARIO("main_3", "[main_3]")
+{
+	Backpack test(130, 20);
+	Backpack copy(test);
+	int val[] = { 10, 20, 30, 40, 50, 60, 75, 80, 90, 100, 100, 110, 90, 80, 10, 30, 40, 80, 15, 75 };
+	int wt[] = { 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 };
+	REQUIRE(test.knapSack(wt, val, copy) == 585);
+}
 
 
 
